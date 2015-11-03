@@ -1,0 +1,28 @@
+{
+  "name": "poker-combinations",
+  "version": "1.0.0",
+  "description": "Produce all the 21 possible combinations of texas hold'em cards",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brunoscopelliti/poker-combinations.git"
+  },
+  "keywords": [
+    "poker",
+    "hold'em",
+    "combinations"
+  ],
+  "author": "Bruno Scopelliti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brunoscopelliti/poker-combinations/issues"
+  },
+  "homepage": "https://github.com/brunoscopelliti/poker-combinations",
+  "devDependencies": {
+    "tape": "^4.2.2",
+    "tape-case": "^1.0.1"
+  }
+}
