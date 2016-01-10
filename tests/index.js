@@ -15,6 +15,7 @@ tape('check interface', function(t) {
 tcase([
   { description: 'combinations', args: [ [1,2,3,4,5,6,7], 5 ], result: 21 },
   { description: 'combinations', args: [ [1,1,2,2,3,4,10], 5 ], result: 21 },
+  { description: 'combinations', args: [ [1,1,2,2,3,4,10] ], result: 21 },
   { description: 'combinations', args: [ [1,2,3,4,5,6,7], 0 ], result: 1 },
   { description: 'combinations', args: [ [1,2,3,4,5,6,7], 4 ], result: 35 },
   { description: 'combinations', args: [ [1,2,3,4,5,6,7], 6 ], result: 7 },

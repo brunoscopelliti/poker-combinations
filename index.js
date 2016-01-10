@@ -3,17 +3,17 @@
 
 exports = module.exports = function getCombinations(cards, size) {
 
-  if (!size) {
+  if (size == null)
+    size = 5;
+
+  if (size === 0)
     return [[]];
-  }
 
-  if (size > cards.length) {
+  if (size > cards.length)
     return [];
-  }
 
-  if (size == cards.length) {
+  if (size == cards.length)
     return [cards];
-  }
 
   let combinations = [];
 

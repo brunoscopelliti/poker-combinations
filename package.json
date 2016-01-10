@@ -1,6 +1,6 @@
 {
   "name": "poker-combinations",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Produce all the 21 possible combinations of texas hold'em cards",
   "main": "index.js",
   "scripts": {
