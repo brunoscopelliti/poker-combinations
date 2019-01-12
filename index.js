@@ -1,25 +1,34 @@
+/**
+ * @name getCombinations
+ * @param {Array} cards
+ * @param {Number} size
+ */
+const getCombinations =
+  (cards, size) => {
+    if (size == null) {
+      size = 5;
+    }
 
-'use strict';
+    if (size === 0) {
+      return [[]];
+    }
 
-exports = module.exports = function getCombinations(cards, size) {
+    if (size > cards.length) {
+      return [];
+    }
 
-  if (size == null)
-    size = 5;
+    if (size === cards.length) {
+      return [cards];
+    }
 
-  if (size === 0)
-    return [[]];
+    const combinations = [];
 
-  if (size > cards.length)
-    return [];
+    return cards.reduce((combs, card, i) => {
+      const newCombination = getCombinations(cards.slice(i + 1), size - 1)
+        .map((comb) => [card].concat(comb));
 
-  if (size == cards.length)
-    return [cards];
+      return combs.concat(newCombination);
+    }, combinations);
+  };
 
-  let combinations = [];
-
-  return cards.reduce(function (combs, card, i) {
-    let newCombination = getCombinations(cards.slice(i + 1), size - 1).map(comb => [card].concat(comb));
-    return combs.concat(newCombination);
-  }, combinations);
-
-}
+module.exports = getCombinations;

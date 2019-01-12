@@ -1,32 +1,17 @@
+/* eslint-env jest */
 
-const tape = require('tape');
-const tcase = require('tape-case');
+const getCombinations = require("../index");
 
-const getCombs = require('../index.js');
+const json = (o) => JSON.stringify(o);
 
-tape('poker-combinations:', function(t) { t.end(); });
+it("getCombinations size default is 5", () => {
+  const combs = getCombinations([1, 2, 3, 4, 5, 6, 7]);
 
-tape('check interface', function(t) {
-  t.equal(typeof getCombs, 'function', 'getCombs is a function');
-  t.end();
+  expect(json(combs)).toMatchSnapshot();
 });
 
+it("getCombinations with explicit size of 5", () => {
+  const combs = getCombinations([1, 2, 3, 4, 5, 6, 7], 5);
 
-tcase([
-  { description: 'combinations', args: [ [1,2,3,4,5,6,7], 5 ], result: 21 },
-  { description: 'combinations', args: [ [1,1,2,2,3,4,10], 5 ], result: 21 },
-  { description: 'combinations', args: [ [1,1,2,2,3,4,10] ], result: 21 },
-  { description: 'combinations', args: [ [1,2,3,4,5,6,7], 0 ], result: 1 },
-  { description: 'combinations', args: [ [1,2,3,4,5,6,7], 4 ], result: 35 },
-  { description: 'combinations', args: [ [1,2,3,4,5,6,7], 6 ], result: 7 },
-  { description: 'combinations', args: [ [1,2,3,4,5,6,7], 7 ], result: 1 },
-  { description: 'combinations', args: [ [1,2,3,4,5,6,7], 8 ], result: 0 },
-], function(cards, size) {
-
-  var combs = getCombs(cards, size);
-
-  console.log(combs)
-
-  return combs.length;
-
+  expect(json(combs)).toMatchSnapshot();
 });
