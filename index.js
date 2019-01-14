@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * @name getCombinations
  * @param {Array} cards

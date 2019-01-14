@@ -1,5 +1,7 @@
 /* eslint-env jest */
 
+"use strict";
+
 const getCombinations = require("../index");
 
 const json = (o) => JSON.stringify(o);
