@@ -1,4 +1,4 @@
-# poker-combinations
+# @botpoker/all-combs
 
 When you're playing Texas Hold'em Poker, you only have two cards in your hands.
 
@@ -8,24 +8,24 @@ Supposing the order doesn't matter (and in fact it doesn't matter at all)... how
 
 It turns out that there is a whole branch of math [[1]](https://en.wikipedia.org/wiki/Combination) that strives to answer this kind of questions... the answer is 42... mmm well not exactly, but almost, it's **21**.
 
-If you, like me, are interested to know exactly what these 21 combinations are, you can use this **poker-combinations** module I've made.
+If you, like me, are interested to know exactly what these 21 combinations are, you can use this **@botpoker/all-combs** module I've made.
 
 It's a pretty simple, and small JavaScript module, without dependencies; it exports just a function you can use to get those combinations you're interested in.
 
 ```js
-const getCombinations = require("poker-combinations");
+const getCombinations = require("@botpoker/all-combs");
 const comb = getCombinations([1, 2, 3, 4, 5, 6, 7]);
   // it's the same that const comb = getCombinations([1,2,3,4,5,6,7], 5);
 
 comb.length // = 42/2
 ```
 
-## npm
+## NPM
 
-Hey npm folks, you can install [poker-combinations](https://www.npmjs.com/package/poker-combinations) via npm:
+Hey npm folks, you can install [@botpoker/all-combs](https://www.npmjs.com/package/@botpoker/all-combs) via npm:
 
 ```
-npm i poker-combinations --save
+npm i @botpoker/all-combs
 ```
 
 ... but probably you already knew.
