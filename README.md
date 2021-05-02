@@ -10,7 +10,7 @@ It turns out that there is a whole branch of math [[1]](https://en.wikipedia.org
 
 If you, like me, are interested to know exactly what these 21 combinations are, you can use this **poker-combinations** module I've made.
 
-It's a pretty simple, and small javascript module, without dependencies; it exports just a function you can use to get those combinations you're interested in.
+It's a pretty simple, and small JavaScript module, without dependencies; it exports just a function you can use to get those combinations you're interested in.
 
 ```js
 const getCombinations = require("poker-combinations");
